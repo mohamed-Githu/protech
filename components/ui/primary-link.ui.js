@@ -8,19 +8,16 @@ const PrimaryLink = ({ children, id }) => {
   const [hover, setHover] = useState(false);
 
   const onNav = () => {
-    document
-      .querySelector("#" + id)
-      .scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#" + id).scrollIntoView({ behavior: "smooth" });
     setOpen(false);
   };
 
   return (
     <div
-      className="relative"
+      className="relative sm:p-5"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={onNav}
-      className="sm:p-5"
     >
       <Typography variant="link1" className="text-white">
         {children}
