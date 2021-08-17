@@ -21,8 +21,23 @@ const HeroSection = () => (
         rich user experience
       </Typography>
       <div className="flex space-x-8 mt-0.5 xs:space-x-0 xs:space-y-4 xs:flex-col xs:w-full">
-        <Button>Contact Us</Button>
-        <Button style="outline" className="">
+        <Button
+          onClick={() =>
+            document
+              .querySelector("#contact")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
+          Contact Us
+        </Button>
+        <Button
+          style="outline"
+          onClick={() =>
+            document
+              .querySelector("#projects")
+              .scrollIntoView({ behavior: "smooth" })
+          }
+        >
           Study Case
         </Button>
       </div>
