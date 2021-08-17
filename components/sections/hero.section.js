@@ -1,4 +1,3 @@
-import ParticlesBackground from "../ui/particles-background.ui";
 import Typography from "../ui/typography.ui";
 import Button from "../ui/button.ui";
 
@@ -28,7 +27,6 @@ const HeroSection = () => (
         </Button>
       </div>
     </div>
-    <ParticlesBackground />
   </div>
 );
 
