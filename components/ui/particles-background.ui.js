@@ -2,7 +2,7 @@ import Particles from "react-tsparticles";
 
 const ParticlesBackground = () => {
   return (
-    <div className="absolute inset-0">
+    <div className="absolute inset-0 sm:hidden">
       <Particles
         className="absolute inset-0"
         params={{
