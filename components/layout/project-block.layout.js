@@ -5,7 +5,7 @@ import Typography from "../ui/typography.ui";
 
 const ProjectBlock = ({ image, link, className, title, type }) => (
   <div
-    className={`rounded-30 p-0 box-border shadow-1 overflow-hidden cursor-pointer relative ${
+    className={`rounded-30 p-0 box-border shadow-1 overflow-hidden cursor-pointer relative transform hover:scale-105 ${
       type === "mobile" ? "h-500 lg:h-350" : "h-300"
     } ${className}`}
   >

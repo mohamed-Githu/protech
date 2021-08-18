@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 const SocialIcon = ({ src }) => (
-  <div>
+  <div className="hover:scale-105 duration-300">
     <Image
       src={src}
       height={37}
