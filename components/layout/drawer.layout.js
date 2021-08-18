@@ -8,11 +8,11 @@ const Drawer = () => {
 
   return (
     <div
-      className={`fixed h-screen w-full bg-primary-dark flex items-center justify-center z-30 transition-all duration-300 ${
+      className={`fixed h-screen w-full bg-primary-dark flex items-center justify-center z-30 transition-all animate-swipe origin-top ${
         !open && "hidden"
       }`}
     >
-      <div className="duration-300 animate-appear scale-125">
+      <div className="animate-appear">
         <NavTabs column />
       </div>
     </div>

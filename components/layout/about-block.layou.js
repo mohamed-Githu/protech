@@ -48,7 +48,7 @@ const AboutBlock = ({ title, paragraph, image, testimonials }) => {
   return (
     <div
       ref={ref}
-      className="flex justify-between lg:flex-col lg:items-center lg:space-y-20 py-32 sm:py-20 overflow-hidden"
+      className="flex justify-between lg:flex-col lg:items-center lg:space-y-20 pt-72 sm:pt-40 pb-1 overflow-hidden"
     >
       <motion.div className="max-w-md flex flex-col items-start lg:items-center overflow-hidden">
         <motion.div animate={titleAnimation}>

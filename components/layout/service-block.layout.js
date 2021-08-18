@@ -6,7 +6,7 @@ import Typography from "../ui/typography.ui";
 import { useEffect } from "react";
 
 const ServiceBlock = ({ title, paragraph, image, reverse }) => {
-  const { ref, inView } = useInView({ threshold: 0.6, triggerOnce: true });
+  const { ref, inView } = useInView({ threshold: 0.4, triggerOnce: true });
   const imageAnimation = useAnimation();
   const titleAnimation = useAnimation();
   const paragraphAnimation = useAnimation();
@@ -20,12 +20,12 @@ const ServiceBlock = ({ title, paragraph, image, reverse }) => {
       titleAnimation.start({
         y: 0,
         opacity: 1,
-        transition: { duration: 1, delay: 0.8, type: "spring" },
+        transition: { duration: 1, delay: 0.8, type: "spring", bounce: 0 },
       });
       paragraphAnimation.start({
         y: 0,
         opacity: 1,
-        transition: { duration: 1, delay: 1, type: "spring" },
+        transition: { duration: 1, delay: 1, type: "spring", bounce: 0 },
       });
     } else {
       imageAnimation.start({

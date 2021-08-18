@@ -78,7 +78,7 @@ const AboutSection = () => {
 
   return (
     <div
-      className="max-w-1180 mx-auto space-y-80 sm:space-y-52 px-4 xs:px-2"
+      className="max-w-1180 mx-auto pb-60 px-4 xs:px-2"
       id="about"
       ref={ref}
     >

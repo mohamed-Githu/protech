@@ -30,11 +30,13 @@ const tabs = [
 const NavTabs = ({ className, column }) => (
   <div
     className={`space-x-10 flex items-center flex-wrap sm:space-x-0 sm:w-full sm:justify-center sm:flex-wrap ${className} ${
-      column && "flex-col space-x-0 space-y-8"
+      column ? "flex-col space-x-0 space-y-8" : "sm:children:p-5"
     }`}
   >
     {tabs.map((tab) => (
-      <PrimaryLink id={tab.id}>{tab.name}</PrimaryLink>
+      <PrimaryLink key={tab.id} id={tab.id}>
+        {tab.name}
+      </PrimaryLink>
     ))}
   </div>
 );

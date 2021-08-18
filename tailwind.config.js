@@ -78,13 +78,18 @@ module.exports = {
       },
       keyframes: {
         appear: {
-          "0%": { opacity: 0, transform: "scale(1)" },
-          "50%": { opacity: 0, transform: "scale(1)" },
-          "100%": { opacity: 1, transform: "scale(1.25)" },
+          "0%": { opacity: 0, transform: "translateY(50px)" },
+          "60%": { opacity: 0, transform: "translateY(50px)" },
+          "100%": { opacity: 1, transform: "translateY(0)" },
+        },
+        swipe: {
+          "0%": { transform: "scaleY(0)" },
+          "100%": { transform: "scaleY(1)" },
         },
       },
       animation: {
-        appear: "appear 500ms ease ",
+        appear: "appear 1s ease",
+        swipe: "swipe 500ms ease-in-out",
       },
       rotate: {
         30: "30deg",
@@ -93,7 +98,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
+    display: ["children"],
   },
-  plugins: [],
+  plugins: [require("tailwindcss-children")],
 };

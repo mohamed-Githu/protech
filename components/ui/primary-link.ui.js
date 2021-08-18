@@ -14,19 +14,18 @@ const PrimaryLink = ({ children, id }) => {
 
   return (
     <div
-      className="relative sm:p-5"
       onMouseEnter={() => setHover(true)}
       onMouseLeave={() => setHover(false)}
       onClick={onNav}
     >
-      <Typography variant="link1" className="text-white">
+      <Typography variant="link1" className="text-white relative">
         {children}
+        <div
+          className={`h-0.5 duration-300 transition-all rounded-full bg-primary absolute bottom-0 left-0 ${
+            hover ? "w-full" : "w-0"
+          }`}
+        />
       </Typography>
-      <div
-        className={`h-0.5 duration-300 transition-all rounded-full bg-primary absolute bottom-0 left-0 ${
-          hover ? "w-full" : "w-0"
-        }`}
-      />
     </div>
   );
 };
